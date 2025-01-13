@@ -22,7 +22,10 @@ class ButtonAnswer extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 30, 8, 82),
       ),
       onPressed: onClick,
-      child: Text(textAnswer),
+      child: Text(
+        textAnswer,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
