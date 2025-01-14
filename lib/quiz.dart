@@ -23,6 +23,13 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  void restartQuiz() {
+    setState(() {
+      listAnswer = [];
+      activeScreen = 'start-screen';
+    });
+  }
+
   void choseAnswer(String answer) {
     listAnswer.add(answer);
 
@@ -46,6 +53,7 @@ class _QuizState extends State<Quiz> {
     if (activeScreen == 'result-screen') {
       screenWidget = ResultScreen(
         chosenAnswer: listAnswer,
+        restartQuiz: restartQuiz,
       );
     }
 
@@ -58,9 +66,6 @@ class _QuizState extends State<Quiz> {
               Color.fromARGB(255, 72, 9, 101)
             ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
           ),
-          // child: activeScreen == 'start-screen'
-          //     ? StartScreen(switchScreen)
-          //     : QuestionsScreen(),
           child: screenWidget,
         ),
       ),

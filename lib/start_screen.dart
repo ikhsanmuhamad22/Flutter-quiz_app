@@ -16,14 +16,6 @@ class StartScreen extends StatelessWidget {
             width: 200,
             color: const Color.fromARGB(150, 255, 255, 255),
           ),
-          // this is the else way you transparancy your widget
-          // Opacity(
-          //   opacity: 0.5,
-          //   child: Image.asset(
-          //     'assets/images/quiz-logo.png',
-          //     width: 200,
-          //   ),
-          // ),
           SizedBox(
             height: 40,
           ),
